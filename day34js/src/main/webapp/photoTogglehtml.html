@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+
+	#pic{
+		display: none;
+		/* transform: translateY(-100%); */
+	}
+
+
+</style>
+<script src="js/jQuery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button:eq(0)").on("click",function(){ // eq(0) 전에 first로 구별했던 거 여러개면 이걸로 구분
+			$("#pic").toggle("slow");
+		});
+	});
+</script>
+
+<button>사진아 나와라</button></br></br>
+<img id="pic" alt="개발의민족로고" src="img/개발의 민족.png">
+
+
+</body>
+</html>

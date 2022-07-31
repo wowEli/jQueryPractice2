@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet"
+	href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<title>스와이퍼 예제</title>
+<style>
+img {
+	display: block;
+	margin: auto;
+}
+</style>
+</head>
+<body>
+<h1> </h1></br></br></br></br></br></br></br></br></br></br></br></br>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img alt="개발메인로고" src="img/개발메인로고.png">
+			</div>
+			<div class="swiper-slide">
+				<img alt="개발이름로고" src="img/개발이름로고.png">
+			</div>
+			<div class="swiper-slide">
+				<img alt="개발의민족로고" src="img/개발의 민족.png">
+			</div>
+
+			...
+
+		</div>
+		<!-- If we need pagination -->
+		<div class="swiper-pagination"></div>
+
+		<!-- If we need navigation buttons -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+
+
+	</div>
+
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script type="text/javascript">
+  var mySwiper = new Swiper('.swiper-container', {
+	  navigation: {
+	    prevEl: '.swiper-button-prev',
+	    nextEl: '.swiper-button-next',
+	  },
+	  pagination: {
+		    el: '.swiper-pagination',
+		    type: 'bullets',
+		  },
+	});
+  </script>
+</body>
+</html>

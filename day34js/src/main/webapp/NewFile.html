@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+	*{
+		margin: 1px;
+	}
+	body{
+		overflow: hidden; /* 화면 밖으로 나가는 것들은 숨겨줘 */
+	}
+	#box1{
+		height: 100px;
+		background-color: coral;
+		transform: translateX(-97%); /* 가로로 이동은 x */
+		transition: all 1s;
+	}
+	#box2{
+		height: 100px;
+		background-color: lightblue;
+		transform: translateX(97%); /* 가로로 이동은 x */
+		transition: all 1s;
+	}
+	.on{
+		transform: translateX(0);
+	}
+	#box1.on,#box2.on{
+		transform: translateX(0);
+	}
+</style>
+<script src="js/jQuery-3.6.0.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button:eq(0)").on("click",function(){ // eq(0) 전에 first로 구별했던 거 여러개면 이걸로 구분
+			$("#box1").toggleClass("on");
+		});
+		$("button:eq(1)").on("click",function(){
+			$("#box2").toggleClass("on");
+		});
+		$("button:eq(2)").on("click",function(){
+			$("button:eq(0)").trigger("click");
+			$("button:eq(1)").trigger("click");
+		});
+	});
+</script>
+<div id="box1"></div>
+<div id="box2"></div>
+<button>액션1</button>
+<button>액션2</button>
+<button>액션3</button>
+
+</body>
+</html>
